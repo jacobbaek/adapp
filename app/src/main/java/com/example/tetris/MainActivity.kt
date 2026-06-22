@@ -11,6 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        private const val BASE_DROP_INTERVAL_MS = 1000L
+        private const val MIN_DROP_INTERVAL_MS = 100L
+        private const val LEVEL_SPEED_INCREMENT_MS = 90L
+    }
+
     private lateinit var tetrisView: TetrisView
     private lateinit var nextPieceView: NextPieceView
     private lateinit var tvScore: TextView
@@ -30,8 +36,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /** Drop interval in ms, decreasing as the level rises (minimum 100 ms). */
-    private fun dropInterval(): Long = maxOf(100L, 1000L - (game.level - 1) * 90L)
+    /** Drop interval in ms, decreasing as the level rises (minimum [MIN_DROP_INTERVAL_MS]). */
+    private fun dropInterval(): Long =
+        maxOf(MIN_DROP_INTERVAL_MS, BASE_DROP_INTERVAL_MS - (game.level - 1) * LEVEL_SPEED_INCREMENT_MS)
 
     // -------------------------------------------------------------------------
     // Lifecycle

@@ -249,8 +249,7 @@ class TetrisGame {
             1 -> 100 * level
             2 -> 300 * level
             3 -> 500 * level
-            4 -> 800 * level
-            else -> 1200 * level
+            else -> 800 * level  // 4 lines (Tetris)
         }
         level = linesCleared / 10 + 1
     }

@@ -83,15 +83,16 @@ class TetrisView @JvmOverloads constructor(
                     Color.green(g.currentColor),
                     Color.blue(g.currentColor)
                 )
+                val ghostInset = cellSize * 0.08f
                 for (row in g.currentShape.indices) {
                     for (col in g.currentShape[row].indices) {
                         if (g.currentShape[row][col] == 0) continue
                         val bx = g.currentX + col
                         val by = ghostY + row
                         if (by < 0) continue
-                        val cx = ox + bx * cellSize + 2
-                        val cy2 = oy + by * cellSize + 2
-                        canvas.drawRect(cx, cy2, cx + cellSize - 4, cy2 + cellSize - 4, ghostPaint)
+                        val cx = ox + bx * cellSize + ghostInset
+                        val cy2 = oy + by * cellSize + ghostInset
+                        canvas.drawRect(cx, cy2, cx + cellSize - ghostInset * 2, cy2 + cellSize - ghostInset * 2, ghostPaint)
                     }
                 }
             }

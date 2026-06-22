@@ -34,8 +34,10 @@ class NextPieceView @JvmOverloads constructor(
         val color = g.nextColor
 
         // Find bounding box of the piece within the 4×4 matrix
-        var minRow = shape.size; var maxRow = 0
-        var minCol = shape[0].size; var maxCol = 0
+        var minRow = shape.size
+        var maxRow = 0
+        var minCol = shape[0].size
+        var maxCol = 0
         for (r in shape.indices) {
             for (c in shape[r].indices) {
                 if (shape[r][c] != 0) {
