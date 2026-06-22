@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tetris</string>
+
+    <!-- Info bar labels -->
+    <string name="label_score">Score</string>
+    <string name="label_level">Level</string>
+    <string name="label_lines">Lines</string>
+    <string name="label_next">Next</string>
+
+    <!-- Button labels -->
+    <string name="btn_pause">⏸ Pause</string>
+    <string name="btn_resume">▶ Resume</string>
+    <string name="btn_rotate">↻ Rotate</string>
+    <string name="btn_hard_drop">⬇ Drop</string>
+    <string name="btn_left">◀</string>
+    <string name="btn_down">▼</string>
+    <string name="btn_right">▶</string>
+</resources>
