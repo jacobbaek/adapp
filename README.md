@@ -23,7 +23,8 @@ Android용 테트리스 게임 앱입니다.
 
 ## 릴리즈 배포하기
 
-버전 태그를 푸시하면 GitHub Actions가 자동으로 APK를 빌드하고 릴리즈를 생성합니다.
+- `main`/`master` 브랜치에 푸시하면 GitHub Actions가 자동으로 APK를 빌드하고 **Build 릴리즈(프리릴리즈)** 를 생성합니다.
+- `v*` 버전 태그를 푸시하면 정식 릴리즈를 생성합니다.
 
 ```bash
 git tag v1.0.0
